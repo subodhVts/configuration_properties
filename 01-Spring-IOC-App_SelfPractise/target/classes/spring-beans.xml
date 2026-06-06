@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    
+    <beans>
+    <bean id ="de" name="deEngine" class="in.ashoit.beans.DieselEngine"/>
+    <bean id ="pe" name="peEngine" class="in.ashoit.beans.PetrolEngine"/>
+    
+    
+    
+      <bean id ="carr" name="car" class="in.ashoit.beans.Car">
+      <constructor-arg name="eng" ref="de"/>
+      <property name="eng" ref="pe"/>
+    
+    
+    </bean>
+    
+    </beans>
+
+</beans>
